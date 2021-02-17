@@ -90,7 +90,7 @@
         <div id="main">
             <h1>Ultimas Entradas</h1>
                 <article class="post">
-                    <h2>Titulo de entrada</h2>
+                   <a href=""> <h2>Titulo de entrada</h2>
                     <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim recusandae veritatis quo,
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
@@ -100,11 +100,11 @@
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
                     Quis blanditiis molestiae ducimus laudantium.
                     </p>
-                
-                </article>     
-                   
+                   </a>
+                </article>  
+
                 <article class="post">
-                    <h2>Titulo de entrada</h2>
+                   <a href=""> <h2>Titulo de entrada</h2>
                     <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim recusandae veritatis quo,
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
@@ -114,10 +114,11 @@
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
                     Quis blanditiis molestiae ducimus laudantium.
                     </p>
-                
-                </article>     
+                   </a>
+                </article> 
+
                 <article class="post">
-                    <h2>Titulo de entrada</h2>
+                   <a href=""> <h2>Titulo de entrada</h2>
                     <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim recusandae veritatis quo,
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
@@ -127,10 +128,11 @@
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
                     Quis blanditiis molestiae ducimus laudantium.
                     </p>
-                
-                </article>     
+                   </a>
+                </article> 
+
                 <article class="post">
-                    <h2>Titulo de entrada</h2>
+                   <a href=""> <h2>Titulo de entrada</h2>
                     <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim recusandae veritatis quo,
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
@@ -140,10 +142,15 @@
                     necessitatibus officiis totam quae velit sit quisquam atque illo esse maxime dolore dignissimos. 
                     Quis blanditiis molestiae ducimus laudantium.
                     </p>
-                
-                </article>     
+                   </a>
+                </article>    
 
-        </div>
+            <div id="show-all">
+                <a href="">Ver todas las entradas</a>
+
+            </div>
+        </div> <!-- FIN DE MAIN -->
+
         <div class="clearfix"></div>
     </div>
         <!-- PIE DE PAGINA -->

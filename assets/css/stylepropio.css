@@ -125,11 +125,13 @@ body {
 }
 
 /*MAIN*/
-
+#main a {
+    color: #333;
+}
 #main{
     float: left;
     width: 65%;
-    min-height: 900px;
+    min-height: 700px;
     background: white;
     border-radius: 5px;
     box-shadow: 0px 0px 5px #ccc;
@@ -138,4 +140,43 @@ body {
     overflow: hidden;
 }
 
+#main h1{
+    font-family: "fajala";
+    font-size: 32px;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    
+    
+}
+#main h2 {
+    font-family: "fajala";
+    font-size: 20px;
+    color: #2979CD;
+    text-shadow: 1px 1px 2px #ccc;
+    letter-spacing: 1px;
+    margin-top: 25px;
 
+}
+
+#main p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+}
+
+#show-all {
+    display: block;
+    width: 160px;
+    padding: 20px; 
+    margin: 0px auto;
+    margin-top: 40px;
+    border-radius: 2px;
+    background: #007ee5;
+    color: white;
+    border: 1px solid #156785;
+    cursor: pointer;
+
+
+
+}
