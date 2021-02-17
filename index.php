@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog de Videojuegos</title>
+    <link rel="stylesheet" href="./assets/css/stylepropio.css">
 </head>
 <body>
     <!-- CABECERA -->
