@@ -5,7 +5,7 @@ Se trata de un blog personal sobre videojuegos, en este caso.
 
 # TAREAS REALIZADAS HASTA AHORA
 - MAQUETACION EN HTML5 100%
-- MAQUETACION EN CSS5 100%
+- MAQUETACION EN CSS5 90%
 - BASE DE DATOS MYSQL  20%
 - BACKEND EN PHP 10% 
 
