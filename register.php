@@ -1,7 +1,12 @@
 <?php
+
+if(isset($_POST)){
+    // Conectar a la Base de datos
+require_once 'includes/connect.php';
+ 
+// Iniciar Sesion
 session_start();
-if(isset($_POST))
-{
+
 // Recoger valores del formulario.
     $name =     isset ($_POST['name']) ? $_POST['name'] : false;
     $lastname = isset ($_POST['lastname']) ? $_POST['lastname'] : false;
@@ -46,13 +51,32 @@ if(isset($_POST))
     $save_user = false;
     if(count($errors) == 0){
         $save_user = true;
-        // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
+ // CIFRAR CONTRASEÑA
+        $password_code = password_hash($password, PASSWORD_BCRYPT, ['cost'=> 4]);
 
+        //var_dump($password);
+        //var_dump($password_code);
+
+        //var_dump(password_verify($password, $password_code));
+        //die;
+
+ // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
+    $sql = "INSERT INTO usuarios VALUES (null, $nombre, $apellidos, $email, $password, CURDATE() );";
+    $query = mysqli_query($db, $sql);
+
+    if ($sql){
+        $_SESSION['registrado'] = "El registro se ha completado con exito";
+    }else {
+        $_SESSION['errors']['general'] = "Fallo al guardar el usuario nuevo";
+
+    }
 
     }else{
       $_SESSION['errors'] = $errors;
       header('Location: index.php');
     }
 }
+
+header('Location: index.php');
 
 ?>
