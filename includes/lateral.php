@@ -1,3 +1,6 @@
+<?php
+ require_once 'includes/helpers.php'; 
+?>
 <!-- BARRA LATERAL -->
 <aside id="sidebar">
 <div id="login" class="block-aside">
@@ -19,7 +22,8 @@
 
         <label for="name">Nombre</label>
         <input type="text" name="name" />
-    
+        <?php mostrarError($_SESSION['errors'], 'name'); ?>
+
         <label for="lastname">Apellidos</label>
         <input type="text" name="lastname" />
     

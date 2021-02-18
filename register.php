@@ -1,10 +1,11 @@
 <?php
+session_start();
 if(isset($_POST))
 {
 // Recoger valores del formulario.
-    $name = isset ($_POST['name']) ? $_POST['name'] : false;
+    $name =     isset ($_POST['name']) ? $_POST['name'] : false;
     $lastname = isset ($_POST['lastname']) ? $_POST['lastname'] : false;
-    $email = isset ($_POST['email']) ? $_POST['email'] : false;
+    $email =    isset ($_POST['email']) ? $_POST['email'] : false;
     $password = isset ($_POST['password']) ? $_POST['password'] : false;
 
 // Array de errores
@@ -15,7 +16,8 @@ if(isset($_POST))
         $name_validate = true;
     } else {
         $name_validate = false;
-        $errors['nombre'] = "El nombre no es valido";
+        $errors['name'] = "El nombre no es valido";
+        
     }
 // Validar Lastname
     if(!empty($lastname) && !is_numeric ($lastname) && !preg_match("/[0-9]/",$lastname)){
@@ -44,11 +46,12 @@ if(isset($_POST))
     if(count($errors) == 0){
         $save_user = true;
         // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
+
+
     }else{
-
+       $_SESSION['errors'] = $errors;
+       header('Location: index.php');
     }
-
-
 }
 
 ?>
