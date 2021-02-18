@@ -77,6 +77,6 @@ require_once 'includes/lateral.php';
 
 
 <?php 
-// FOOTER
+// FOOTER HTML 
 require_once 'includes/footer.php';
 ?>

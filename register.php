@@ -17,7 +17,8 @@ if(isset($_POST))
     } else {
         $name_validate = false;
         $errors['name'] = "El nombre no es valido";
-        
+        //var_dump($name_validate);
+        echo $errors['name'];
     }
 // Validar Lastname
     if(!empty($lastname) && !is_numeric ($lastname) && !preg_match("/[0-9]/",$lastname)){
@@ -49,8 +50,8 @@ if(isset($_POST))
 
 
     }else{
-       $_SESSION['errors'] = $errors;
-       header('Location: index.php');
+      $_SESSION['errors'] = $errors;
+      header('Location: index.php');
     }
 }
 

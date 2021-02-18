@@ -1,12 +1,16 @@
 <?php
 function mostrarError($errors, $campo){
-    $alert = '';
+    $alert= '';
     if(isset($errors[$campo]) && !empty($campo)){
-        $alert = "<div class='alert-error>".$errors[$campo].'</div>';
+        $alert = "<div class='alert alert-error'>".$errors[$campo].'</div>';
     }
-
     return $alert;
-
 }
 
+function borrarErrors(){
+    $_SESSION['errors'] = null;
+    $result = session_unset($_SESSION['errors']);
+
+    return $result;
+}
 ?>
