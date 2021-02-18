@@ -49,3 +49,5 @@ require_once 'connect.php';
 
         <div class="clearfix"></div>
     </header>
+
+    <div id="container">

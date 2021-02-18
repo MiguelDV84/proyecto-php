@@ -3,7 +3,7 @@
 require_once 'includes/cabecera.php';
 ?>
 
-        <div id="container">
+        
 <?php
 // BARA LATERAL HTML
 require_once 'includes/lateral.php';
@@ -75,8 +75,8 @@ require_once 'includes/lateral.php';
             </div>
         </div> <!-- FIN DE MAIN -->
 
-        <div class="clearfix"></div>
-    </div>
+
 <?php 
+// FOOTER
 require_once 'includes/footer.php';
 ?>
