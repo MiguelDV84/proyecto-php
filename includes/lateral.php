@@ -29,7 +29,7 @@
         <label for="password">Password</label>
         <input type="password" name="password" />
 
-        <input type="submit" value="Registro" />
+        <input type="submit" value="Registro" name="register" />
     </form>
 </div>
 
