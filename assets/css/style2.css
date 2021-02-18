@@ -110,7 +110,8 @@ body {
 #container{
    /* border: 1px solid black;*/
     width: 85%;
-    min-height: 900px;
+    height: auto;
+    /*min-height: auto;*/
     margin: 0px auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -121,18 +122,45 @@ body {
 #sidebar{
     float:right;
     width: 25%;
-    min-height: 900px;
+    height: auto;
 }
 
-.block-aside{
-    font-family: "fajala";
-    border: 1px solid black;
+.block-aside {    
+    
     display: block;
     width: 90%;
-    margin: 20px auto;
+    margin: 10px auto;
     background: white;
-    padding: 9px;
+    padding: 20px;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 0px 1px #FFFF inset, 0px -3px 2px rgba(0,0,0,0.25) inset;
 
+}
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    display: block;
+    width: 95%;
+    height: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+input[type="button"],
+input[type="submit"]{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 7px;
+    display: block;
+    border-radius: 2px;
+    background: #007ee5;
+    color: white;
+    border: 1px solid #156785;
+    cursor: pointer;
+}
+
+.block-aside h3{
+    padding: 5px;
+    margin-bottom: 10px;
 
 }
 
@@ -188,7 +216,19 @@ body {
     color: white;
     border: 1px solid #156785;
     cursor: pointer;
+}
 
-
+#footer {
+    clear: both;
+    width: 85%;
+    margin: 0px auto;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%); 
+    border: 1px solid #c9c9c9;
+    border-bottom: none;
+    border-radius: 8px 8px 0px 0px;
+    color: #666;
+    text-align: center;
 
 }
