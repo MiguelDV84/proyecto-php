@@ -41,7 +41,8 @@
 
         <input type="submit" value="Registro" name="register" />
     </form>
-    <?php echo isset($_SESSION['errors']) ? borrarErrors() : ''; ?>
+    <?php echo isset($_SESSION['errors']) ? borrarErrors() : ''; 
+    ?>
 </div>
 
 </aside>

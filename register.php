@@ -61,10 +61,10 @@ session_start();
         //die;
 
  // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
-    $sql = "INSERT INTO usuarios VALUES (null, $nombre, $apellidos, $email, $password, CURDATE() );";
+    $sql = "INSERT INTO usuarios(id, nombre, apellidos, email, password) VALUES (null, $nombre, $apellidos, $email, $password, CURDATE() );";
     $query = mysqli_query($db, $sql);
 
-    if ($sql){
+    if ($query){
         $_SESSION['registrado'] = "El registro se ha completado con exito";
     }else {
         $_SESSION['errors']['general'] = "Fallo al guardar el usuario nuevo";

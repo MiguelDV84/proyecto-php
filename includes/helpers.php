@@ -9,7 +9,7 @@ function mostrarError($errors, $campo){
 
 function borrarErrors(){
     $_SESSION['errors'] = null;
-    $result = session_unset($_SESSION['errors']);
+    $result = session_unset();
 
     return $result;
 }
