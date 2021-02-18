@@ -124,6 +124,18 @@ body {
     min-height: 900px;
 }
 
+.block-aside{
+    font-family: "fajala";
+    border: 1px solid black;
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 9px;
+
+
+}
+
 /*MAIN*/
 #main a {
     color: #333;
