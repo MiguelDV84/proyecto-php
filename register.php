@@ -60,7 +60,7 @@ require_once 'includes/connect.php';
         //die;
 
  // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
-    $sql = "INSERT INTO usuarios(id, nombre, apellidos, email, password) VALUES (null, $nombre, $apellidos, $email, $password, CURDATE() );";
+    $sql = "INSERT INTO usuarios(id, nombre, apellidos, email, password) VALUES (null, $name, $lastname, $email, $password, CURDATE() );";
     $query = mysqli_query($db, $sql);
 
     if ($query){

@@ -19,6 +19,7 @@
 <div id="register" class="block-aside">
     <h3>Registrate</h3>
     <form action="register.php" method="POST">
+    
         <?php if(isset($_SESSION['errors'])): ?>
             <?php //var_dump($_SESSION['errors']); ?>
         <?php endif; ?>
