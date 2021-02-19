@@ -4,8 +4,7 @@ if(isset($_POST)){
     // Conectar a la Base de datos
 require_once 'includes/connect.php';
  
-// Iniciar Sesion
-session_start();
+
 
 // Recoger valores del formulario.
     $name =     isset ($_POST['name']) ? $_POST['name'] : false;
@@ -73,7 +72,7 @@ session_start();
 
     }else{
       $_SESSION['errors'] = $errors;
-      header('Location: index.php');
+
     }
 }
 
