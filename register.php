@@ -3,8 +3,6 @@
 if(isset($_POST)){
     // Conectar a la Base de datos
 require_once 'includes/connect.php';
- 
-
 
 // Recoger valores del formulario.
     $name =     isset ($_POST['name']) ? $_POST['name'] : false;
@@ -60,22 +58,25 @@ require_once 'includes/connect.php';
         //die;
 
  // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
-    $sql = "INSERT INTO usuarios(id, nombre, apellidos, email, password) VALUES (null, $name, $lastname, $email, $password, CURDATE() );";
-    $query = mysqli_query($db, $sql);
+    
+ 
+    $sql = "INSERT INTO usuarios (id, nombre, apellidos, email, password, fecha) VALUES (null, '$name', '$lastname', '$email', '$password', CURDATE());";
+    $query = mysqli_connect($db, $sql);
+        
 
-    if ($query){
-        $_SESSION['registrado'] = "El registro se ha completado con exito";
-    }else {
-        $_SESSION['errors']['general'] = "Fallo al guardar el usuario nuevo";
-
-    }
-
+    if ($query) {
+        echo "Regsitrado correctamente";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($db);
+      } 
+      
+      
     }else{
       $_SESSION['errors'] = $errors;
 
     }
 }
 
-header('Location: index.php');
+// header('Location: index.php');
 
 ?>
