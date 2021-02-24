@@ -7,9 +7,10 @@ $database = "blog";
 
 $db = mysqli_connect($server, $username, $password, $database);
 
-mysqli_query($db, "SET NAME 'utf8'");
-
-// INICIAR SESION
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 
 session_start();
 
