@@ -54,13 +54,18 @@ if (isset($_POST)) {
         // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
         $sql = "INSERT INTO usuarios (id, nombre, apellidos, email, password, fecha) VALUES (null, '$name', '$lastname', '$email', '$password', CURDATE());";
         $query = mysqli_query($db, $sql);
+        if ($query){
+            $_SESSION['registrado'] = "El registro se ha completado";
+        } else{
+            $_SESSION['errors']['general'] = "Fallo al guardar el usuario";
+        }
 
-        if ($query) {
+       /* if ($query) {
             echo "Regsitrado correctamente";
         } else {
             echo "Query con error: " . $sql . "<br>";
             printf("Errormessage: %s\n", mysqli_error($db));
-        }
+        }*/
     } else {
         $_SESSION['errors'] = $errors;
     }
