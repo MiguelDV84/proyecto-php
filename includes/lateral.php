@@ -1,5 +1,7 @@
 <?php
+
  require_once 'includes/helpers.php'; 
+
 ?>
 <!-- BARRA LATERAL -->
 <aside id="sidebar">
