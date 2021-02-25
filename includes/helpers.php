@@ -8,9 +8,18 @@ function mostrarError($errors, $campo){
 }
 
 function borrarErrors(){
-    $_SESSION['errors'] = null;
+    $result = false;
+
+    if(isset($_SESSION['errors'])){
+        $_SESSION['errors'] = null;
+        $result = session_unset();
+    }
+
+    if(isset($_SESSION['registrado'])){
+    $_SESSION['registrado'] = null;
     $result = session_unset();
 
     return $result;
+    }
 }
 ?>
