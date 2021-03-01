@@ -20,16 +20,18 @@
 
 <div id="register" class="block-aside">
     <h3>Registrate</h3>
+
     <!-- MOSTRAR ERRORES -->
-    <php? if(isset($_SESSION['registrado'] )): ?>
-        <div class="alert alert-session">
-            <?=$_SESSION['registrado']; ?>
-         </div>
-            <php? elseif(isset($_SESSION['errors']['general'])): ?>
-                <div class="alert alert-session">
-            <?=$_SESSION['errors']['general']; ?>
-         </div>
-                <php? endif;: ?>
+
+    <?php if(isset($_SESSION['registrado'])):?>
+         <div class="alert alert-registrado"> 
+            <?= $_SESSION['registrado'];?>
+        </div>
+    <?php    elseif(isset($_SESSION['errors']['general'])):?>
+        <div class="alert alert-registrado"> 
+            <?= $_SESSION['errors']['general'];?>
+        </div>
+    <?php    endif;?>
 
     <form action="register.php" method="POST">
     

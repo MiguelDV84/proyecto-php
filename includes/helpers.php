@@ -16,7 +16,7 @@ function borrarErrors(){
     }
 
     if(isset($_SESSION['registrado'])){
-    $_SESSION['registrado'] = null;
+    $_SESSION['registrado'] = null; 
     $result = session_unset();
 
     return $result;
