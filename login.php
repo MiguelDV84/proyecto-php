@@ -14,27 +14,32 @@ $login = mysqli_query($db, $sql);
 
 if($login && mysqli_num_rows($login) == 1 ){
     $user = mysqli_fetch_assoc($login);
-    var_dump($user);
-    die;
+
 
 // COMPROBAR LA CONTRASEÑA
-    $password_code = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
-    var_dump($password_code);
-    die();
+   $verify = password_verify($password, $user['password']);
+    if($verify){
+    // UTILIZAR UNA SESSION PARA GUARDAR LOS DATOS DEL USUARIO LOGEADO.
+        $_SESSION['user'] = $user;
+        session_unset();
+        
     }
-} else{
-    // MENSAJE DE ERROR
+}else{
+    // SI ALGO FALLA ENVIAR UNA SESSION CON EL FALLO
+    $_SESSION['error_login'] = "Login incorrecto";
+    }
 }
-
-
-
-
-
-// UTILIZAR UNA SESSION PARA GUARDAR LOS DATOS DEL USUARIO LOGEADO.
-
-// SI ALGO FALLA ENVIAR UNA SESSION CON EL FALLO
-
 // REDIRIGIR AL index.php
+header ('Location: index.php');
+
+
+
+
+
+
+
+
+
 
 
 ?>
