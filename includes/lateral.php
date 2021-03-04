@@ -4,7 +4,14 @@
 
 ?>
 <!-- BARRA LATERAL -->
+
 <aside id="sidebar">
+<?php if(isset($_SESSION['user'])): ?>
+    <div id="user-logged" class="block-aside">
+   <h3> <?php $_SESSION['user']['nombre'].''.$_SESSION['user']['apellidos']; ?> </h3>
+    </div>
+<?php endif; ?>
+
 <div id="login" class="block-aside">
     <h3>Identificate</h3>
     <form action="login.php" method="POST">

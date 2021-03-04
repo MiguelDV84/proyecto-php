@@ -49,7 +49,7 @@ if (isset($_POST)) {
     if (count($errors) == 0) {
         $save_user = true;
         // CIFRAR CONTRASEÑA
-        $password_code = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
+        $password_code = password_hash($password, PASSWORD_DEFAULT, ['cost' => 4]);
 
         // INSERTAR USUARIO EN LA TABLA DE USUARIOS DE LA BBDD
         $sql = "INSERT INTO usuarios (id, nombre, apellidos, email, password, fecha) VALUES (null, '$name', '$lastname', '$email', '$password_code  ', CURDATE());";
